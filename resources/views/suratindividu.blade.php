@@ -62,12 +62,7 @@
                                     required>
                                     <option>
                                     </option>
-                                    @foreach ($nama as $namapg )
-                                        <option value={{ $namapg->id }}>
-                                            {{ $namapg->nama }}
-                                        </option>
-
-                                    @endforeach
+                                   
                                 </select>
                             </div>
                             <div class="space-y-2">

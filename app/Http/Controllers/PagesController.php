@@ -60,8 +60,6 @@ class PagesController extends Controller
             ];
         }
 
-
-
         $selectedYear3 = $request->input('year', date('Y'));
         // Default to the current month if no specific month is provided
         $selectedMonth3 = $request->input('month', date('F'));
@@ -87,8 +85,6 @@ class PagesController extends Controller
         }
 
         $total_surat = Surat::count();
-        $total_karyawan = Pegawai::count();
-        $total_vip = Vip::count();
 
         $anggarantertinggi = Surat::select('anggaran')
             ->groupBy('anggaran')
@@ -97,48 +93,30 @@ class PagesController extends Controller
             ->pluck('anggaran')
             ->first();
 
-        return view('dashboard', compact('total_surat', 'total_vip', 'total_karyawan', 'labels', 'data', 'labels2', 'data2', 'labels3', 'dataSets', 'anggarantertinggi', 'selectedYear3', 'selectedMonth3', 'selectedYear3', 'selectedMonth2'));
+        return view('dashboard', compact('total_surat', 'labels', 'data', 'labels2', 'data2', 'labels3', 'dataSets', 'anggarantertinggi', 'selectedYear3', 'selectedMonth3', 'selectedYear3', 'selectedMonth2'));
     }
 
     public function suratindividu()
     {
 
-
-        $pemberi = Vip::all();
-        $namapg = Pegawai::all();
-
-        return view('suratindividu', [
-            'pemberi' => $pemberi, 'nama' => $namapg
-        ]);
+        return view('suratindividu');
     }
 
     public function suratkolektif()
     {
 
-        $pemberi = Vip::all();
-        $namapg = Pegawai::all();
 
-        return view('suratkolektif', [
-            'pemberi' => $pemberi, 'nama' => $namapg
-        ]);
+        return view('suratkolektif');
     }
 
     public function suratduplikatindividu()
     {
-        $pemberi = Vip::all();
-        $namapg = Pegawai::all();
-        return view('suratduplikat-individu', [
-            'pemberi' => $pemberi, 'nama' => $namapg
-        ]);
+        return view('suratduplikat-individu');
     }
 
     public function suratduplikatkolektif()
     {
-        $pemberi = Vip::all();
-        $namapg = Pegawai::all();
-        return view('suratduplikat-kolektif', [
-            'pemberi' => $pemberi, 'nama' => $namapg
-        ]);
+        return view('suratduplikat-kolektif');
     }
 
     public function profil()

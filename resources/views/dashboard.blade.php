@@ -47,31 +47,8 @@
                             <div class="-mx-3">
                                 <div class="px-3">
                                     <div>
-                                        <p class="mb-0 font-sans font-semibold leading-normal text-sm">Pegawai</p>
-                                        <h5 class="mb-0 font-bold">
-                                            {{ $total_karyawan }}
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="px-3 text-right basis-1/3">
-                                    <div
-                                        class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                                        <i class="ni leading-none ni-single-02 text-lg relative top-3.5 text-white"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="px-3 mb-6">
-                    <div class="break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
-                        <div class="p-4">
-                            <div class="-mx-3">
-                                <div class="px-3">
-                                    <div>
                                         <p class="mb-0 font-sans font-semibold leading-normal text-sm">Kepala Divisi</p>
                                         <h5 class="mb-0 font-bold">
-                                            {{ $total_vip }}
                                         </h5>
                                     </div>
                                 </div>
