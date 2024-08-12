@@ -46,12 +46,7 @@
                                     required>
                                     <option>
                                     </option>
-                                    @foreach ($pemberi as $namavip )
-                                        <option>
-                                            {{ $namavip->nama }}
-                                        </option>
-
-                                    @endforeach
+                                   
                                 </select>
                             </div>
                             <div class="space-y-2">

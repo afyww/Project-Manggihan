@@ -47,12 +47,6 @@
                                     required>
                                     <option>
                                     </option>
-                                    @foreach ($pemberi as $namavip )
-                                        <option>
-                                            {{ $namavip->nama }}
-                                        </option>
-
-                                    @endforeach
                                 </select>
                             </div>
                             <div class="space-y-2 font-semibold text-black" for="Multiselect">Nama
@@ -63,12 +57,7 @@
                                     required>
                                     <option>
                                     </option>
-                                    @foreach ($nama as $namapg )
-                                    <option value={{ $namapg->id }}>
-                                        {{ $namapg->nama }}
-                                    </option>
-
-                                @endforeach
+                                    
                                 </select>
                             </div>
                             <div class="space-y-2">
